@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM in Med</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script defer src="app.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="https://i.imgur.com/Skx5dh7.png" alt="STEM in Medicine Logo" class="logo-img">
+                <span class="logo-text">STEM in Med</span>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" id="programs-button">Programs</a></li>
+                <li><a href="#" id="about-button">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="login">Sign in</button>
+                <button id="register">Register</button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="text-content">
+                <h1>Empowering Future Medical Innovators</h1>
+                <p>STEM in Med is a non-profit dedicated to fostering innovation at the intersection of science, technology, engineering, and medicine.</p>
+                <button class="primary-button">See Features</button>
+                <button class="secondary-button">Pricing</button>
+            </div>
+            <div class="image-content">
+                <img src="hero-image.png" alt="Innovation in Medicine">
+            </div>
+        </section>
+
+ <!-- Digital Services Section -->
+<section class="digital-services">
+    <h2>Digital Services</h2>
+    <p>Enhancing healthcare through technology and innovation.</p>
+
+    <div class="digital-container">
+        <div class="digital-card">
+            <div class="img-container">
+                <img src="https://i.imgur.com/O7KGAV7.png" alt="Telemedicine">
+            </div>
+            <div class="text-container">
+                <h3>Telemedicine Platforms</h3>
+                <p>Remote healthcare solutions connecting doctors with patients worldwide.</p>
+            </div>
+        </div>
+
+        <div class="digital-card">
+            <div class="img-container">
+                <img src="https://i.imgur.com/E916Bss.png" alt="AI Diagnostics">
+            </div>
+            <div class="text-container">
+                <h3>AI-Powered Diagnostics</h3>
+                <p>Advanced AI algorithms for early detection and accurate diagnosis.</p>
+            </div>
+        </div>
+
+        <div class="digital-card">
+            <div class="img-container">
+                <img src="https://i.imgur.com/ytqY9ya.png" alt="Wearable Tech">
+            </div>
+            <div class="text-container">
+                <h3>Wearable Health Devices</h3>
+                <p>Track real-time vitals and improve personal health monitoring.</p>
+            </div>
+        </div>
+
+        <div class="digital-card">
+            <div class="img-container">
+                <img src="https://via.placeholder.com/200x150" alt="EHR Systems">
+            </div>
+            <div class="text-container">
+                <h3>Electronic Health Records</h3>
+                <p>Secure and efficient digital management of medical records.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- About Section -->
+<section class="about" id="about-section">
+    <!-- Left Side: About Text -->
+    <div class="about-text">
+        <h2>About STEM in Med</h2>
+        <p>STEM in Med is dedicated to bridging the gap between science, technology, engineering, and medicine. Our mission is to educate, inspire, and empower the next generation of medical innovators.</p>
+        <p>Through hands-on experiences, mentorship, and access to cutting-edge developments in healthcare and biomedical research, we strive to make STEM education in medicine more accessible and impactful.</p>
+    </div>
+
+    <!-- Right Side: Mission Card -->
+    <div class="about-highlight">
+        <h3>Our Mission</h3>
+        <p>“Empowering future medical leaders through education, innovation, and collaboration.”</p>
+
+        <div class="key-highlights">
+            <div class="highlight-box">
+                <i class="fas fa-microscope"></i>
+                <h4>Innovation</h4>
+                <p>Driving breakthroughs in biomedical technology.</p>
+            </div>
+            <div class="highlight-box">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Education</h4>
+                <p>Hands-on learning experiences for students worldwide.</p>
+            </div>
+            <div class="highlight-box">
+                <i class="fas fa-heartbeat"></i>
+                <h4>Impact</h4>
+                <p>Improving healthcare through STEM advancements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+      <!-- Innovation in Medicine Section -->
+<section class="innovation-medicine">
+    <h2>Innovation in Medicine</h2>
+    <p>Bridging the gap between cutting-edge research and practical medical applications.</p>
+
+    <div class="innovation-container">
+        <div class="innovation-card">
+            <img src="https://i.imgur.com/GGRQTKu.png" alt="Biomedical Engineering">
+            <h3>Biomedical Engineering</h3>
+            <p>Discover groundbreaking medical devices and bio-sensors improving patient care.</p>
+        </div>
+        
+        <div class="innovation-card">
+            <img src="https://i.imgur.com/ztEEYX3.png" alt="Genomics & Personalized Medicine">
+            <h3>Genomics & Personalized Medicine</h3>
+            <p>Understand how genetic sequencing is leading to customized treatments for patients.</p>
+        </div>
+        
+        <div class="innovation-card">
+            <img src="https://i.imgur.com/ncCNIyk.png" alt="Robotics in Surgery">
+            <h3>Robotics in Surgery</h3>
+            <p>Explore the role of robotics in precision surgeries and patient rehabilitation.</p>
+        </div>
+        
+        <div class="innovation-card">
+            <img src="https://i.imgur.com/EYDFBVW.png" alt="Regenerative Medicine">
+            <h3>Regenerative Medicine</h3>
+            <p>Learn how stem cell therapy and tissue engineering are reshaping modern medicine.</p>
+        </div>
+    </div>
+</section>
+
+
+      <!-- Programs Section -->
+<section class="programs" id="programs-section">
+    <h2>STEM in Medicine Programs</h2>
+    <p>Discover our hands-on programs that bring STEM and medicine together.</p>
+
+    <div class="programs-container">
+        <div class="program-card">
+            <h3>Biomedical Engineering</h3>
+            <p>Hands-on experience with cutting-edge medical devices and technologies.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Medical AI & Data Science</h3>
+            <p>Learn how artificial intelligence is shaping the future of healthcare.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Genomics & Biotechnology</h3>
+            <p>Explore DNA sequencing, CRISPR, and genetic engineering advancements.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Healthcare Robotics</h3>
+            <p>Discover how robotics is revolutionizing surgery, rehabilitation, and patient care.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Regenerative Medicine</h3>
+            <p>Understand stem cell therapy, tissue engineering, and regenerative treatments.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Neuroscience & Brain Tech</h3>
+            <p>Delve into brain-computer interfaces, neuroengineering, and cognitive tech.</p>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Have a question or want to collaborate? Reach out to us, and we’ll get back to you as soon as possible.</p>
+            <div class="contact-details">
+                <p><i class="fas fa-envelope"></i> Email: steminmed@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +1 (443) 305-9077</p>
+                <p><i class="fas fa-map-marker-alt"></i> Location: Ellicott City, Maryland</p>
+            </div>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+           <form action="https://formspree.io/f/xpwpavyj" method="POST">
+    <div class="input-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="input-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="input-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="contact-btn">Send Message</button>
+</form>
+
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2025 STEM in Med. All rights reserved.</p>
+          <p>Made by Suhas Anumolu</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("programs-button").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("programs-section").style.display = "block";
+            window.scrollTo({ top: document.getElementById("programs-section").offsetTop, behavior: "smooth" });
+        });
+
+        document.getElementById("about-button").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("about-section").style.display = "block";
+            window.scrollTo({ top: document.getElementById("about-section").offsetTop, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
